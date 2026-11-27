@@ -128,6 +128,43 @@
     cursor: pointer;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
   }
+}
+
+@keyframes campus-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes campus-float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes campus-dash-flow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.animate-campus-float {
+  animation: campus-float 5s ease-in-out infinite;
+}
+
+.animate-campus-float-slow {
+  animation: campus-float-slow 6.5s ease-in-out infinite;
+}
+
+.animate-campus-dash {
+  stroke-dasharray: 6 8;
+  animation: campus-dash-flow 1.8s linear infinite;
 }
